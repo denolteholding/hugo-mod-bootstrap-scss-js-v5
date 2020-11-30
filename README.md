@@ -1,6 +1,8 @@
-This is a [Hugo Components](https://gohugo.io/hugo-modules/) that packages the [Bootstrap v4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) SCSS source ready to be used in Hugo.
+This is a [Hugo Components](https://gohugo.io/hugo-modules/) that packages the [Bootstrap v5](https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/) SCSS source ready to be used in Hugo.
 
 You need the Hugo extended version and Go to use this component.
+
+Please note that Bootstrap v5 is currently in Alpha.
 
 ## Use
 
@@ -9,7 +11,7 @@ Add the component to your Hugo site's config:
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/gohugoio/hugo-mod-bootstrap-scss-v4"
+path = "github.com/denolteholding/hugo-mod-bootstrap-scss-v5"
 ```
 
 The Bootstrap SCSS will be mounted in `assets/scss/bootstrap`, so you can then import either all:
@@ -22,46 +24,45 @@ Or only what you need:
 
 
 ```scss
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-@import "bootstrap/root";
-@import "bootstrap/reboot";
-@import "bootstrap/type";
-@import "bootstrap/images";
-@import "bootstrap/code";
-@import "bootstrap/grid";
-@import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
-@import "bootstrap/transitions";
-@import "bootstrap/dropdown";
-@import "bootstrap/button-group";
-@import "bootstrap/input-group";
-@import "bootstrap/custom-forms";
-@import "bootstrap/nav";
-@import "bootstrap/navbar";
-@import "bootstrap/card";
-@import "bootstrap/breadcrumb";
-@import "bootstrap/pagination";
-@import "bootstrap/badge";
-@import "bootstrap/jumbotron";
-@import "bootstrap/alert";
-@import "bootstrap/progress";
-@import "bootstrap/media";
-@import "bootstrap/list-group";
-@import "bootstrap/close";
-@import "bootstrap/toasts";
-@import "bootstrap/modal";
-@import "bootstrap/tooltip";
-@import "bootstrap/popover";
-@import "bootstrap/carousel";
-@import "bootstrap/spinners";
-@import "bootstrap/utilities";
-@import "bootstrap/print";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "helpers";
+@import "utilities/api";
 ```
 
 
 ## Versions
 
-This repository will be versioned following the minor and patch versions in the v4 series of Bootstrap.
+This repository is a personal fork of https://github.com/gohugoio/hugo-mod-bootstrap-scss-v4 to explore Bootstrap v5 while in Alpha.
+Please refer to the original repository for proper update cycles and maintenance.
