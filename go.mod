@@ -1,4 +1,4 @@
-module github.com/denolteholding/hugo-mod-bootstrap-scss-v5
+module github.com/denolteholding/hugo-mod-bootstrap-scss-js-v5
 
 go 1.15
 
