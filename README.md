@@ -67,7 +67,7 @@ Or only what you need:
 
 ### JS Bundles
 
-The Bootstrap SCSS will be mounted in `assets/scss/bootstrap`. Within Hugo pages
+The Bootstrap JS bundles will be mounted in `assets/js/bootstrap`. Within Hugo pages
 you can import it as follows to deliver one combined JS file for your site.
 ```html
 {{ $bootstrap := resources.Get "js/bootstrap/bootstrap.bundle.js" }}
