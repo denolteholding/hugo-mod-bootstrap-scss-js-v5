@@ -1,4 +1,4 @@
-This is a [Hugo Components](https://gohugo.io/hugo-modules/) that packages the [Bootstrap v5](https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/) SCSS source ready to be used in Hugo.
+This is a [Hugo Component](https://gohugo.io/hugo-modules/) that packages the [Bootstrap v5](https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/) SCSS source and JS bundles ready to be used in Hugo.
 
 You need the Hugo extended version and Go to use this component.
 
@@ -6,13 +6,17 @@ Please note that Bootstrap v5 is currently in Alpha.
 
 ## Use
 
+### Include module
+
 Add the component to your Hugo site's config:
 
 ```toml
 [module]
 [[module.imports]]
-path = "github.com/denolteholding/hugo-mod-bootstrap-scss-v5"
+path = "github.com/denolteholding/hugo-mod-bootstrap-scss-js-v5"
 ```
+
+### SCSS source files
 
 The Bootstrap SCSS will be mounted in `assets/scss/bootstrap`, so you can then import either all:
 
@@ -61,6 +65,18 @@ Or only what you need:
 @import "utilities/api";
 ```
 
+### JS Bundles
+
+The Bootstrap SCSS will be mounted in `assets/scss/bootstrap`. Within Hugo pages
+you can import it as follows to deliver one combined JS file for your site.
+```html
+{{ $bootstrap := resources.Get "js/bootstrap/bootstrap.bundle.js" }}
+{{ $your_js := resources.Get "js/your_js/main.js" }}
+{{ $defaultJS := slice $bootstrap $your_js | resources.Concat "js/global.js" }}
+{{ $globalJS := $defaultJS | resources.Minify | resources.Fingerprint }}
+
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>
+```
 
 ## Versions
 
