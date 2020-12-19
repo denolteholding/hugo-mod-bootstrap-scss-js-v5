@@ -2,7 +2,7 @@ This is a [Hugo Component](https://gohugo.io/hugo-modules/) that packages the [B
 
 You need the Hugo extended version and Go to use this component.
 
-Please note that Bootstrap v5 is currently in Alpha.
+Please note that Bootstrap v5 is currently in Beta.
 
 ## Use
 
